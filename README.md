@@ -1,11 +1,10 @@
-Ce site est une  référence tunisienne en produits de beauté et de soins personnels.
+This site is a Tunisian reference for beauty and personal care products.
 
-🧪 Projet de Test Automatisé avec Selenium et TestNG : 
+🧪 Automated Testing Project with Selenium and TestNG:
 
-Ce projet est un exemple simple d'automatisation de tests pour un site web à l’aide de Selenium WebDriver et TestNG. Il a pour objectif de valider certaines fonctionnalités clés de l'application à travers des scénarios de test automatisés.
+This project is a simple example of test automation for a website using Selenium WebDriver and TestNG. Its goal is to validate key functionalities of the application through automated test scenarios.
 
-
-🔧 Technologies utilisées
+🔧 Technologies Used:
 
 Java
 
@@ -13,6 +12,6 @@ Selenium WebDriver
 
 TestNG
 
-Maven (optionnel, si utilisé pour la gestion des dépendances)
+Maven (optional, if used for dependency management)
 
 ![alt text](./img-test.png)

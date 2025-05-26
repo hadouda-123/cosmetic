@@ -7,6 +7,7 @@
       <class name="cosmetic.tests.LoginTest"/>
      <class name="cosmetic.tests.SearchProductTest"/>
        <class name="cosmetic.tests.AddCartTest"/>
+       <class name="cosmetic.tests.LogoutTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -24,13 +24,14 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     public void login(String email, String password) throws InterruptedException {
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		String zoomChrome = "document.body.style.zoom='50.0%'";
+	    js.executeScript(zoomChrome);
     	//wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput));
         driver.findElement(emailInput).sendKeys(email);
         driver.findElement(passwordInput).sendKeys(password);
-      
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 300);");
-        Thread.sleep(500);
+              js.executeScript("window.scrollBy(0, 300);");
+       // Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         driver.findElement(loginButton).click();
         wait.until(ExpectedConditions.elementToBeClickable(goHome));

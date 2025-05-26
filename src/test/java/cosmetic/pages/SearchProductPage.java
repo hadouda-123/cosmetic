@@ -31,6 +31,9 @@ public class SearchProductPage {
 
 //cliquer sur le lien Parfums
 	public void selectCatalog() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String zoomChrome = "document.body.style.zoom='50.0%'";
+	    js.executeScript(zoomChrome);
 		WebElement parfumlink = driver.findElement(selectcatalog);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", parfumlink);// scroll found
 																										// Parfums
@@ -38,6 +41,9 @@ public class SearchProductPage {
 	}
 
 	public void clickProduct(String title) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String zoomChrome = "document.body.style.zoom='50.0%'";
+	    js.executeScript(zoomChrome);
 //chercher le produit selon input search
 		WebElement inputsearch = driver.findElement(search);
 		inputsearch.sendKeys(title);
@@ -50,11 +56,11 @@ public class SearchProductPage {
 		WebElement productImage = wait.until(ExpectedConditions.elementToBeClickable(clickOnTitle));
 		// cliquer sur le produit
 		productImage.click();
-		Thread.sleep(500);
+		//Thread.sleep(500);
 	}
 
 	public void assertProductTitle() {
-		String expectedTitle = "Coffret crème brulée - K-reine";
+		String expectedTitle = "Coffret wishes - K-reine";
 		WebElement titleElement = driver.findElement(prodTitle);
 		String actualTitle = titleElement.getText();
 		Assert.assertEquals(expectedTitle, actualTitle);

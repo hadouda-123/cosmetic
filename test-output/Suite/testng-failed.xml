@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="url" value="https://cosmetique.tn/connexion?back=my-account"/>
     <classes>
-      <class name="cosmetic.tests.AddCartTest">
+      <class name="cosmetic.tests.LogoutTest">
         <methods>
           <include name="setUp"/>
-          <include name="addProd"/>
+          <include name="logout"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- cosmetic.tests.AddCartTest -->
+      </class> <!-- cosmetic.tests.LogoutTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("hajjihadouda328@gmail.com", "Hajji2025$");
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed: URL did not redirect");
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
     }
 
 }

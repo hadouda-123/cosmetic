@@ -17,8 +17,6 @@ public class AddProdPage {
 
     WebDriverWait wait;
 
-
-
     By add = By.cssSelector("button.btn.btn-primary.btn-lg.add-to-cart");
 
     By visibleModal = By.id("blockcart-modal");
@@ -26,8 +24,6 @@ public class AddProdPage {
     By btnCom = By.cssSelector("#blockcart-modal .cart-content-btn a.btn.btn-primary");
 
     By prodTitle = By.cssSelector("div.col-9 .product-line-info .label");
-
-
 
     public AddProdPage(WebDriver driver) {
 
@@ -37,18 +33,12 @@ public class AddProdPage {
 
     }
     public void addprod() throws InterruptedException {
-
+    	//minimiser l'écran 50%
     	JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		String zoomChrome = "document.body.style.zoom='50.0%'";
-
 	    js.executeScript(zoomChrome);
 
-    	new WebDriverWait(driver, Duration.ofSeconds(15))
-
-        .until(ExpectedConditions.elementToBeClickable(add))
-
-        .click();
+    	new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(add)).click();
         try {
 
             WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(visibleModal));
@@ -67,11 +57,7 @@ public class AddProdPage {
 
     }
 
-    
-
     public void assertCartProduct() {
-
-    	
 
         String expectedUrl = "https://cosmetique.tn/panier?action=show";
 
@@ -83,10 +69,7 @@ public class AddProdPage {
 
         Assert.assertEquals(expectedUrl, actualUrl);
 
-
-
-        String expectedProductTitle = "Coffret crème brulée - K-reine";
-
+        String expectedProductTitle = "Coffret wishes - K-reine";
         WebElement titleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(prodTitle));
 
         String actualTitle = titleElement.getText().trim();

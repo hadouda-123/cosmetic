@@ -18,15 +18,11 @@ public class BaseTest {
 	public void setUp(String url) {
 
 		if (driver == null) {
-
 			WebDriverManager.chromedriver().setup();
-
 			driver = new ChromeDriver();
-
 			driver.manage().window().maximize();
 
 			driver.get(url);
-
 		}
 	}
 

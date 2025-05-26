@@ -10,7 +10,7 @@ public class AddCartTest extends BaseTest{
 	        addProdPage.addprod();
 	        Thread.sleep(5000);
 	        addProdPage.assertCartProduct();
-	        Thread.sleep(5000);
+	       // Thread.sleep(5000);
 
 	    }
 }

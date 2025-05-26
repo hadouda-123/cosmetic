@@ -9,9 +9,9 @@ public class SearchProductTest extends BaseTest{
 	    public void homePageTest() throws InterruptedException {
 	        SearchProductPage searchProd = new SearchProductPage(driver);
 	        searchProd.selectCatalog();
-	        searchProd.clickProduct("Coffret crème brulée - K-reine");
+	        searchProd.clickProduct("Coffret wishes - K-reine");
 	      searchProd.assertProductTitle();
-	        Thread.sleep(5000);
+	        //Thread.sleep(5000);
 
 	    }
 }

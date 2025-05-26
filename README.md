@@ -12,6 +12,8 @@ Selenium WebDriver
 
 TestNG
 
-Maven (optional, if used for dependency management)
+Maven (optional, if used for dependency management).
+
+This image shows the execution result of the website using TestNG.
 
 ![alt text](./img-test.png)

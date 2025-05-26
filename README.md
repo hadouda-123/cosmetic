@@ -15,4 +15,4 @@ TestNG
 
 Maven (optionnel, si utilisé pour la gestion des dépendances)
 
-![alt text](./img-test.jpg)
+![alt text](./img-test.png)
